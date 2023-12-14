@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webstudio main page</title>
     <link
       rel="stylesheet"
@@ -33,6 +34,11 @@
             <li><a href="" class="nav-link">Contacts</a></li>
           </ul>
         </nav>
+        <button class="burger-head-btn" type="button">
+          <svg class="burger-head-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="nav-cont">
           <ul class="nav-contacts">
             <li>
@@ -489,9 +495,33 @@
       </div>
     </footer>
 
-    <!-- Модальне вікно -->
+    <!-- Мобільна навігація -->
 
-    <div class="backdrop is-open">
+    <!-- Модальне вікно -->
+    <div class="mobile-menu-wrapper">
+      <div class="container">
+        <button class="mobile-menu-close-btn" type="button">
+          <svg class="mobile-menu-close-btn" width="8" height="8">
+            <use href="./images/icons.svg#icon-closed"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="">Studio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="">Portfolio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-closed-btn" type="button">
           <svg class="modal-closed-bnt-icon" width="8" height="8">
