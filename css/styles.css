@@ -74,7 +74,6 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     font-weight: 700;
-    margin-right: 76px;
 }
 
 .nav-logo-hightlight {
@@ -92,6 +91,21 @@ img {
 
 /* Мобільне меню */
 
+.mobile-menu-container {
+    position: relative;
+}
+
+.mobile-menu-list-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+
+}
+
 .mobile-menu-wrapper {
     position: fixed;
     top: 0;
@@ -100,11 +114,13 @@ img {
     height: 100%;
     z-index: 99999;
     background-color: #F4F4FD;
+    padding: 72px 24px 40px 16px;
 }
 
 .mobile-menu-close-btn {
     position: absolute;
     top: 24px;
+    right: 8px;
     display: flex;
     height: 24px;
     width: 24px;
