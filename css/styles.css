@@ -249,6 +249,277 @@ img {
     margin-left: 16px;
 }
 
+
+/* Модалка */
+
+/* Затемнення*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: rgba(46, 47, 66, 0.40);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Модальне вікно */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    min-height: 623px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: #FCFCFC;
+    padding: 72px 16px 24px 16px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal-closed-btn {
+    display: flex;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #E7E9FC;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-closed-btn:focus {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    border: none;
+}
+
+.modal-closed-bnt-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal-text {
+    color: #2E2F42;
+
+    font-weight: 500;
+    line-height: 24px
+}
+
+.modal-text {
+    color: #2E2F42;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Форма */
+
+.review-form {
+    display: block;
+}
+
+/* Інпути */
+.rewiew-form-user-box {
+    margin-bottom: 8px;
+}
+
+.review-form-user-input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    height: 40px;
+    padding-left: 38px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0px solid transparent;
+}
+
+.review-form-user-input:focus {
+    border-color: #4D5AE5;
+}
+
+.review-form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-user-input:focus+.review-form-input-icon {
+    fill: #4D5AE5;
+}
+
+.review-form-user-label {
+    display: block;
+    color: #8E8F99;
+    line-height: 1.17;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+
+.review-form-input {
+    position: relative;
+}
+
+/* Комнтар */
+
+.review-form-comment {
+    margin-bottom: 16px;
+}
+
+.review-form-comment-textarea {
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    background-color: transparent;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    padding: 8px 16px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0px solid transparent;
+
+}
+
+
+/* Коментар */
+
+
+.review-form-comment-textarea::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.34;
+}
+
+.review-form-comment-textarea:focus {
+    border-color: #4D5AE5;
+}
+
+
+.review-form-comment-label {
+    color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.34;
+    margin-bottom: 4px;
+}
+
+/* Привасі Полісі */
+
+.review-form-privacy {
+    margin-bottom: 24px;
+}
+
+
+.review-form-privacy-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-privacy-checkbox:checked+.review-form-privacy-label>.review-form-privacy-check {
+    background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.review-form-privacy-check-icon {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-privacy-checkbox:checked+.review-form-privacy-label .review-form-privacy-check-icon {
+
+    opacity: 1;
+}
+
+.review-form-privacy-checkbox:focus+.review-form-privacy-label>.review-form-privacy-check {
+    outline: 2px solid #4D5AE5;
+}
+
+
+.review-form-privacy-check {
+    fill: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-privacy-label {
+    color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+
+.hightlight {
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #4d5ae5;
+}
+
+/* Кнопка з відгуком */
+
+.review-form-button {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-width: 169px;
+    height: 56px;
+    color: #FFF;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-form-button:focus {
+    background-color: #404BBF;
+}
+
 @media screen and (max-width:767px) {
 
     /* Мобільне меню */
@@ -504,6 +775,45 @@ img {
         margin: 0;
     }
 
+    /* Модальне вікно */
+
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 25px 24px 23px;
+    }
+
+    .modal-closed-btn {
+        cursor: pointer;
+    }
+
+    .modal-closed-btn:hover,
+    .modal-closed-btn:focus {
+        background-color: #404BBF;
+        fill: #FFFFFF;
+        border: none;
+    }
+
+
+    /* Коментар */
+
+
+
+    .review-form-privacy-check {
+        cursor: pointer;
+    }
+
+    /* Кнопка з відгуком */
+
+    .review-form-button {
+        cursor: pointer;
+    }
+
+    .review-form-button:hover,
+    .review-form-button:focus {
+        background-color: #404BBF;
+    }
+
 }
 
 /* Десктопні стилі */
@@ -517,9 +827,6 @@ img {
     }
 
     /* Хедер */
-
-
-    .header-container {}
 
     .nav {
         width: 452px;
