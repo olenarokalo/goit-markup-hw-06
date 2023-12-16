@@ -49,7 +49,7 @@ img {
     padding: 0 16px;
 }
 
-/* Мобільні стилі */
+/* =========###============Мобільні стилі=========###============ */
 
 /* Хедер */
 
@@ -95,7 +95,7 @@ img {
     fill: #2F2F37;
 }
 
-/* Футер */
+/* =====================Футер===================== */
 
 .afterwords {
     text-align: center;
@@ -250,7 +250,7 @@ img {
 }
 
 
-/* Модалка */
+/*=====================Модалка===================== */
 
 /* Затемнення*/
 
@@ -275,7 +275,7 @@ img {
     pointer-events: auto;
 }
 
-/* Модальне вікно */
+/* =====================Модальне вікно===================== */
 
 .modal {
     position: absolute;
@@ -520,6 +520,63 @@ img {
     background-color: #404BBF;
 }
 
+
+/* ===###==================Вступ==================###=== */
+
+.tagline {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),
+        url(../images/tagline-background/people-office.jpg);
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+.tagline-tittle {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.tagline-btn {
+    display: block;
+    min-width: 169px;
+    border: none;
+    border-radius: 4px;
+    gap: 10px;
+    height: 56px;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #4D5AE5;
+    color: #FFFFFF;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.tagline-btn:active,
+.tagline-btn:focus {
+    background-color: #404BBF;
+}
+
+
 @media screen and (max-width:767px) {
 
     /* Мобільне меню */
@@ -630,12 +687,12 @@ img {
 
 
 
-/* Планшетні стилі */
+/* ===###==================Планшетні стилі==================###=== */
 
 
 @media screen and (min-width:768px) {
 
-    /* Перезапис мобілок */
+    /* =====================Перезапис мобілок===================== */
 
     .container {
         max-width: 768px;
@@ -655,7 +712,7 @@ img {
     }
 
 
-    /* Хедер */
+    /* =====================Хедер===================== */
 
     /* Нав */
 
@@ -717,7 +774,7 @@ img {
         letter-spacing: 0.04em;
     }
 
-    /* Футер */
+    /* =====================Футер===================== */
 
     .afterwords {
         display: flex;
@@ -775,7 +832,7 @@ img {
         margin: 0;
     }
 
-    /* Модальне вікно */
+    /* =====================Модальне вікно===================== */
 
     .modal {
         width: 408px;
@@ -816,7 +873,11 @@ img {
 
 }
 
-/* Десктопні стилі */
+
+
+/* ==================###===Десктопні стилі===###================== */
+
+
 
 
 @media screen and (min-width:1158px) {
@@ -826,7 +887,7 @@ img {
         padding: 0 15px;
     }
 
-    /* Хедер */
+    /* =====================Хедер===================== */
 
     .nav {
         width: 452px;
@@ -866,7 +927,7 @@ img {
         margin-right: 120px;
     }
 
-    /* Футер */
+    /* =====================Футер===================== */
 
     .afterwords {
         padding: 100px 0;
