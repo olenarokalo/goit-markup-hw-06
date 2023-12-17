@@ -275,6 +275,73 @@ screen and (min-resolution: 2dppx) {
     fill: #F4F4FD;
 }
 
+/* =====================Портфоліо===================== */
+
+.anthr-box {
+    border: 1px solid #e7e9fc;
+    background: #FFF;
+    padding: 32px 16px;
+    border-top: none;
+}
+
+.pjct-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+#portfolio {
+    color: #2e2f42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+}
+
+.port {
+    margin-bottom: 72px;
+}
+
+.project-title {
+    color: #2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+    margin-bottom: 8px
+}
+
+.project-type {
+    color: #434455;
+    font-weight: 400;
+}
+
+
+
+.project-item {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: calc((100% - 48px) / 3);
+
+}
+
+.project-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+}
+
 /* =====================Футер===================== */
 
 .afterwords {
